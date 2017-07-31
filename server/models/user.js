@@ -7,9 +7,11 @@ const userSchema = new Schema({
   password: String,
   email: String,
   city: String,
-  avatar: [{type: Schema.Types.ObjectId, ref: 'Avatar'}],
+  avatar: [{type: Schema.Types.ObjectId, ref: 'Picture'}],
 }, {
-  timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
+  timestamps: {
+    createdAt: "created_at",
+    updatedAt: "updated_at" }
 });
 
 const User = mongoose.model("User", userSchema);
