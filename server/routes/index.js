@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
+var wineRoutes = require('./api/wine-entries');
+var userRoutes = require('./api/user-entries');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.use('/api', wineRoutes);
+router.use('/api', userRoutes);
 
 module.exports = router;
