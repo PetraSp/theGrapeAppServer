@@ -20,3 +20,5 @@ router.get('/wine-entries/:id', (req, res, next) => {
     return res.json(entry);
   });
 });
+
+module.exports = router;

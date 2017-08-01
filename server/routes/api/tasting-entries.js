@@ -30,3 +30,5 @@ router.post('/tasting-entries', (req,res,next) => {
     });
   });
 });
+
+module.exports = router;
