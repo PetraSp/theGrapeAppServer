@@ -7,7 +7,7 @@ const userSchema = new Schema({
   password: String,
   email: String,
   city: String,
-  avatar: [{type: Schema.Types.ObjectId, ref: 'Picture'}],
+  avatar: String //[{type: Schema.Types.ObjectId, ref: 'Picture'}],
 }, {
   timestamps: {
     createdAt: "created_at",
