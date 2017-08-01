@@ -5,8 +5,8 @@ const Schema   = mongoose.Schema;
 const tastingSchema = new Schema({
   userID: String,
   score: String,
-  wine: [{ type: Schema.Types.ObjectID, ref: 'Wine'}],
-  userNotes: [{ type: Schema.Types.ObjectID, ref: 'Notes'}]
+  wine: String, //[{ type: Schema.Types.ObjectID, ref: 'Wine'}],
+  userNotes: String, //[{ type: Schema.Types.ObjectID, ref: 'Notes'}]
 }, {
   timestamps: {
     createdAt: "created_at",
