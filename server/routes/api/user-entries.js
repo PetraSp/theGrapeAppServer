@@ -3,6 +3,7 @@
 const express       = require('express');
 const router        = express.Router();
 const Entry         = require('../../models/user');
+const User          = require('../../models/user');
 
 
 router.get('/user-entries', (req, res, next) => {
@@ -30,4 +31,13 @@ router.post('/user-entries', (req,res,next) => {
     city: req.body.city,
     avatar: req.body.avatar
   });
+
+  newUser.save((err) => {
+    if (err) { return err; }
+    if (newUser.errors) { return res.status(400).json(newUser); }
+    return res.json(newUser);
+  });
+
 });
+
+module.exports = router;
