@@ -9,6 +9,8 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "aws": "0.0.3-2",
+    "aws-cli": "0.0.1",
     "aws-sdk": "^2.93.0",
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
