@@ -11,6 +11,15 @@ router.get('/tasting-entries', (req, res, next) => {
   });
 });
 
+router.get('/tasting-entries/:id', (req, res, next) => {
+  Entry.findById(req.params.id, (err, entry) => {
+    if (err) { return res.json(err).status(500); }
+    if (!entry) {return res.json(err).status(404);}
+
+    return res.json(entry);
+  });
+});
+
 router.post('/tasting-entries', (req,res,next) => {
   const newTasting = new Tasting ({
     userID: req.body.userID,
@@ -30,5 +39,6 @@ router.post('/tasting-entries', (req,res,next) => {
     });
   });
 });
+
 
 module.exports = router;

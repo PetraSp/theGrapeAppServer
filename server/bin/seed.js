@@ -6,6 +6,7 @@ const portDB = require('../config').portDB;
 mongoose.connect(`mongodb://localhost:${portDB}/grapeApp`);
 const User = require('../models/user');
 const Wine = require('../models/wine');
+const Tasting = require('../models/tasting');
 
 
 // ###################### ###################### ###################### ######################
@@ -38,7 +39,7 @@ User.create(users, (err, docs) => {
   docs.forEach((user) => {
     console.log(user);
   });
-}); 
+});
 
 // ###################### ###################### ###################### ######################
 //         WINES                  WINES                 WINES                   WINES
@@ -72,3 +73,32 @@ Wine.create(wines, (err, docs) => {
   mongoose.connection.close();
 });
 
+
+// ###################### ###################### ###################### ######################
+//         TASTINGS                 TASTINGS                 TASTINGS                   USERS
+// ###################### ###################### ###################### ######################
+
+const tastings = [
+
+  {
+    userID: "rachel",
+    score: "100",
+    wine: "Cabernet", //[{ type: Schema.Types.ObjectID, ref: 'Wine'}],
+    userNotes: "my Notes",
+  },
+  {
+    userID: "Petra",
+    score: "200",
+    wine: "Rose", //[{ type: Schema.Types.ObjectID, ref: 'Wine'}],
+    userNotes: "your notes",
+  },
+];
+
+Tasting.create(tastings, (err, docs) => {
+  if(err){
+    throw err;
+  }
+  docs.forEach((tasting) => {
+    console.log(tasting);
+  });
+});
