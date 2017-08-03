@@ -1,0 +1,22 @@
+<svg width="23px" height="25px" viewBox="0 0 23 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="iconSC/homeNotSelected" stroke="#979797">
+            <g id="iconSC/home">
+                <path d="M19.5,2.5 L19.5,8" id="Line-11"></path>
+                <path d="M17.5,2.5 L19.5,2.5" id="Line-9"></path>
+                <path d="M17.5,2.5 L17.5,5.8" id="Line-10"></path>
+                <path d="M12,11.960022 L22.9601551,1" id="Line-8" transform="translate(17.480078, 6.480011) scale(1, -1) translate(-17.480078, -6.480011) "></path>
+                <path d="M20.5,10 L20.5,23.5" id="Line-3"></path>
+                <path d="M2.5,24.5 L20.5,24.5" id="Line-4"></path>
+                <path d="M8.5,24.5 L8.5,14.5" id="Line-5"></path>
+                <path d="M8.5,14.5 L14.5,14.5" id="Line-6"></path>
+                <path d="M14.5,14.5 L14.5,24.5" id="Line-7"></path>
+                <path d="M0.5,11.5 L11.4601551,0.539978027" id="Line-8"></path>
+                <path d="M2.5,10 L2.5,23.5" id="Line-3"></path>
+            </g>
+        </g>
+    </g>
+</svg>
