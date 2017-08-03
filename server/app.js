@@ -12,8 +12,10 @@ var index = require('./routes/index');
 var config = require('./config');
 // Connection to DB
 mongoose.connect(`mongodb://localhost:${config.portDB}/${config.databaseName}`);
-var app = express();
 
+var cors = require('cors');
+var app = express();
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
