@@ -12,7 +12,7 @@ const notesSchema = new Schema({
     dryFruit: String,
     herbsSpices: String,
     quirky: String },
-  palette: {
+  palate: {
     redFruit: String,
     blackFruit: String,
     dryFruit: String,
