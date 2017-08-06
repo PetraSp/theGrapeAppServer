@@ -24,6 +24,7 @@ router.get('/user-entries/:id', (req, res, next) => {
 
 
 router.post('/user-entries', (req,res,next) => {
+  console.log('my req.body!!!', req.body);
   const newUser = new User ({
     username: req.body.username,
     password: req.body.password,
