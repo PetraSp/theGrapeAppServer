@@ -7,6 +7,7 @@ const notesSchema = new Schema({
     intensity: String,
     color: String},
   nose: {
+    floral: String,
     redFruit: String,
     blackFruit: String,
     dryFruit: String,

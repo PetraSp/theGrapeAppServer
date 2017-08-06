@@ -2,5 +2,3 @@
     "accessKeyId": "fake_secret", 
     "secretAccessKey": "fake_key_id", 
     "region": "fake_region"
-}
-
