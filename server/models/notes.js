@@ -4,21 +4,21 @@ const Schema   = mongoose.Schema;
 
 const notesSchema = new Schema({
   appearance: {
-    intensity: String,
-    color: String},
+    intensity: {type: String, default: 'default'},
+    color: {type: String, default: 'default'}},
   nose: {
-    floral: String,
-    redFruit: String,
-    blackFruit: String,
-    dryFruit: String,
-    herbsSpices: String,
-    quirky: String },
+    floral: {type: String, default: 'default'},
+    redFruit: {type: String, default: 'default'},
+    blackFruit: {type: String, default: 'default'},
+    dryFruit: {type: String, default: 'default'},
+    herbsSpices: {type: String, default: 'default'},
+    quirky: {type: String, default: 'default'} },
   palate: {
-    redFruit: String,
-    blackFruit: String,
-    dryFruit: String,
-    herbsSpices: String,
-    quirky: String }
+    redFruit: {type: String, default: 'default'},
+    blackFruit: {type: String, default: 'default'},
+    dryFruit: {type: String, default: 'default'},
+    herbsSpices: {type: String, default: 'default'},
+    quirky: {type: String, default: 'default'} }
 }, {
   timestamps: {
     createdAt: "created_at",
