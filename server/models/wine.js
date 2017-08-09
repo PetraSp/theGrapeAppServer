@@ -7,7 +7,7 @@ const wineSchema = new Schema({
   vineyard: String,
   vintage: Number,
   label: String, //[{type: Schema.Types.ObjectId, ref: 'Picture'}],
-  expertNotes: String,//[{ type: Schema.Types.ObjectID, ref: 'Notes'}],
+  expertNotes: [{ type: Schema.Types.ObjectId, ref: 'Notes'}],
 }, {
   timestamps: {
     createdAt: "created_at",

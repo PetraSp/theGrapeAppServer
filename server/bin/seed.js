@@ -7,6 +7,7 @@ mongoose.connect(`mongodb://localhost:${portDB}/grapeApp`);
 const User = require('../models/user');
 const Wine = require('../models/wine');
 const Tasting = require('../models/tasting');
+const Notes = require('..//models/notes');
 
 
 // ###################### ###################### ###################### ######################
@@ -46,21 +47,21 @@ User.create(users, (err, docs) => {
 // ###################### ###################### ###################### ######################
 
 const wines = [
+  {
+    name: 'Presidents Blend',
+    vineyard: 'Escorihuela Gascon',
+    vintage: 2008,
+    label: 'https://lanocheenvino.files.wordpress.com/2016/03/1884.jpg',
+    expertNotes:  "598aea8e46add466d51e2ce8",
+  },
+{
+  name: 'Garnatxa Negra',
+  vineyard: 'Edetaria',
+  vintage: 2011,
+  label: 'https://wine-searcher1.freetls.fastly.net/images/labels/08/33/bodegas-edetaria-via-terra-garnatxa-blanca-terra-alta-spain-10680833t.jpg',
+  expertNotes:  "598aea8e46add466d51e2ce7",
+      },
 
-{
-  name: 'A wine',
-  vineyard: 'the Moon Vineyards.inc',
-  vintage: 1066,
-  label: 'A label',
-  expertNotes: 'Almost expert notes',
-},
-{
-  name: 'Another wine',
-  vineyard: 'The Venus Floating Vineyards',
-  vintage: 2556,
-  label: 'Antigrav Label',
-  expertNotes: 'Makes you taste the acid rain',
-}
 ];
 
 Wine.create(wines, (err, docs) => {
@@ -73,7 +74,7 @@ Wine.create(wines, (err, docs) => {
   mongoose.connection.close();
 });
 
-
+//
 // ###################### ###################### ###################### ######################
 //         TASTINGS                 TASTINGS                 TASTINGS                   USERS
 // ###################### ###################### ###################### ######################
@@ -102,3 +103,64 @@ Tasting.create(tastings, (err, docs) => {
     console.log(tasting);
   });
 });
+
+// ###################### ###################### ###################### ######################
+//         NOTES                 NOTES                 NOTES                   USERS
+// ###################### ###################### ###################### ######################
+
+
+const notes =
+[
+{
+    appearance: {
+      intensity: 'medium',
+      color: 'ruby',
+    },
+    nose: {
+      floral: ['perfumed, floral notes', 'violet'],
+      redFruit: ['strawberry'],
+      blackFruit: ['none'],
+      dryFruit: ['none'],
+      herbsSpices: ['cinnamon', 'vanilla', 'clove'],
+      quirky: ['meat/leather', 'mushroom'],
+    },
+    palate: {
+      redFruit: ['strawberry'],
+      blackFruit: ['none'],
+      dryFruit: ['none'],
+      herbsSpices: ['cinnamon', 'vanilla', 'clove'],
+      quirky: ['meat/leather', 'mushroom']
+    },
+  },
+  {
+      appearance: {
+        intensity: 'deep',
+        color: 'ruby',
+      },
+      nose: {
+        floral: ['none'],
+        redFruit: ['none'],
+        blackFruit: ['black cherry', 'blackberry', 'black plum'],
+        dryFruit: ['none'],
+        herbsSpices: ['none'],
+        quirky: ['meat/leather', 'coffee', 'forest floor'],
+      },
+      palate: {
+        redFruit: ['none'],
+        blackFruit: ['none'],
+        dryFruit: ['none'],
+        herbsSpices: ['black pepper'],
+        quirky: ['none']
+      },
+    },
+  ];
+
+Notes.create(notes, (err, docs) => {
+    if(err){
+      throw err;
+    }
+    docs.forEach((notes) => {
+      console.log(notes);
+    });
+    mongoose.connection.close();
+  });
