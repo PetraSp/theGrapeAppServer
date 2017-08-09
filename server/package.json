@@ -12,6 +12,7 @@
     "aws": "0.0.3-2",
     "aws-cli": "0.0.1",
     "aws-sdk": "^2.93.0",
+    "bcrypt": "^1.0.2",
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
     "cors": "^2.8.4",
@@ -23,6 +24,8 @@
     "fs": "0.0.1-security",
     "mongoose": "^4.11.5",
     "morgan": "~1.8.1",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1",
     "serve-favicon": "~2.4.2"
   },
   "devDependencies": {
