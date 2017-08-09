@@ -8,7 +8,6 @@ const User = require('../models/user');
 const Wine = require('../models/wine');
 const Tasting = require('../models/tasting');
 
-
 // ###################### ###################### ###################### ######################
 //         USERS                  USERS                 USERS                   USERS
 // ###################### ###################### ###################### ######################
@@ -17,11 +16,11 @@ const Tasting = require('../models/tasting');
 const users = [
 
   {
-   username: "Petra Spirulina",
-   password: "1234",
-   email: "petra@spirulina.com",
-   city: "Prague",
-   avatar: "http://www.well-beingsecrets.com/wp-content/uploads/spirulina-is-Antidote-to-Poisoning.jpg"
+    username: "Petra Spirulina",
+    password: "1234",
+    email: "petra@spirulina.com",
+    city: "Prague",
+    avatar: "http://www.well-beingsecrets.com/wp-content/uploads/spirulina-is-Antidote-to-Poisoning.jpg"
   },
   {
     username: "Alex Banana Bickermaster",
@@ -46,21 +45,61 @@ User.create(users, (err, docs) => {
 // ###################### ###################### ###################### ######################
 
 const wines = [
+  {
+    name: 'Presidents Blend',
+    vineyard: 'Escorihuela Gascon',
+    vintage: 2008,
+    label: 'https://lanocheenvino.files.wordpress.com/2016/03/1884.jpg',
+    expertNotes:  {
+      appearance: {
+        intensity: 'deep',
+        color: 'ruby',
+      },
+      nose: {
+        floral: ['none'],
+        redFruit: ['none'],
+        blackFruit: ['black cherry', 'blackberry', 'black plum'],
+        dryFruit: ['none'],
+        herbsSpices: ['none'],
+        quirky: ['meat/leather', 'coffee', 'forest floor'],
+      },
+      palate: {
+        redFruit: ['none'],
+        blackFruit: ['none'],
+        dryFruit: ['none'],
+        herbsSpices: ['black pepper'],
+        quirky: ['none']
+      },
+    },
+  },
+  {
+    name: 'Garnatxa Negra',
+    vineyard: 'Edetaria',
+    vintage: 2011,
+    label: 'https://wine-searcher1.freetls.fastly.net/images/labels/08/33/bodegas-edetaria-via-terra-garnatxa-blanca-terra-alta-spain-10680833t.jpg',
+    expertNotes:  {
+      appearance: {
+        intensity: 'medium',
+        color: 'ruby',
+      },
+      nose: {
+        floral: ['perfumed, floral notes', 'violet'],
+        redFruit: ['strawberry'],
+        blackFruit: ['none'],
+        dryFruit: ['none'],
+        herbsSpices: ['cinnamon', 'vanilla', 'clove'],
+        quirky: ['meat/leather', 'mushroom'],
+      },
+      palate: {
+        redFruit: ['strawberry'],
+        blackFruit: ['none'],
+        dryFruit: ['none'],
+        herbsSpices: ['cinnamon', 'vanilla', 'clove'],
+        quirky: ['meat/leather', 'mushroom']
+      },
+    },
+  },
 
-{
-  name: 'A wine',
-  vineyard: 'the Moon Vineyards.inc',
-  vintage: 1066,
-  label: 'A label',
-  expertNotes: 'Almost expert notes',
-},
-{
-  name: 'Another wine',
-  vineyard: 'The Venus Floating Vineyards',
-  vintage: 2556,
-  label: 'Antigrav Label',
-  expertNotes: 'Makes you taste the acid rain',
-}
 ];
 
 Wine.create(wines, (err, docs) => {
@@ -73,7 +112,7 @@ Wine.create(wines, (err, docs) => {
   mongoose.connection.close();
 });
 
-
+//
 // ###################### ###################### ###################### ######################
 //         TASTINGS                 TASTINGS                 TASTINGS                   USERS
 // ###################### ###################### ###################### ######################
@@ -101,4 +140,5 @@ Tasting.create(tastings, (err, docs) => {
   docs.forEach((tasting) => {
     console.log(tasting);
   });
+  mongoose.connection.close();
 });

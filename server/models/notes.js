@@ -6,18 +6,20 @@ const notesSchema = new Schema({
   appearance: {
     color: {type: String, default: 'default'}},
   nose: {
-    floral: {type: String, default: 'default'},
-    redFruit: {type: String, default: 'default'},
-    blackFruit: {type: String, default: 'default'},
-    dryFruit: {type: String, default: 'default'},
-    herbsSpices: {type: String, default: 'default'},
-    quirky: {type: String, default: 'default'} },
+    floral: {type: Array, default: ['none']},
+    redFruit: {type: Array, default: ['none']},
+    blackFruit: {type: Array, default: ['none']},
+    dryFruit: {type: Array, default: ['none']},
+    herbsSpices: {type: Array, default: ['none']},
+    quirky: {type: Array, default: ['none']},
+  },
   palate: {
-    redFruit: {type: String, default: 'default'},
-    blackFruit: {type: String, default: 'default'},
-    dryFruit: {type: String, default: 'default'},
-    herbsSpices: {type: String, default: 'default'},
-    quirky: {type: String, default: 'default'} }
+    redFruit: {type: Array, default: ['none']},
+    blackFruit: {type: Array, default: ['none']},
+    dryFruit: {type: Array, default: ['none']},
+    herbsSpices: {type: Array, default: ['none']},
+    quirky: {type: Array, default: ['none']},
+  }
 }, {
   timestamps: {
     createdAt: "created_at",

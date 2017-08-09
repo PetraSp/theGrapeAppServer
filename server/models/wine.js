@@ -7,13 +7,33 @@ const wineSchema = new Schema({
   vineyard: String,
   vintage: Number,
   label: String, //[{type: Schema.Types.ObjectId, ref: 'Picture'}],
-  expertNotes: String,//[{ type: Schema.Types.ObjectID, ref: 'Notes'}],
+  expertNotes: {
+    appearance: {
+      intensity: {type: String, default: 'none'},
+      color: {type: String, default: 'none'},
+    },
+    nose: {
+      floral: {type: String, default: 'none'},
+      redFruit: {type: String, default: 'none'},
+      blackFruit: {type: String, default: 'none'},
+      dryFruit: {type: String, default: 'none'},
+      herbsSpices: {type: String, default: 'none'},
+      quirky: {type: String, default: 'none'},
+    },
+    palate: {
+      redFruit: {type: String, default: 'none'},
+      blackFruit: {type: String, default: 'none'},
+      dryFruit: {type: String, default: 'none'},
+      herbsSpices: {type: String, default: 'none'},
+      quirky: {type: String, default: 'none'},
+    }
+  },
 }, {
   timestamps: {
     createdAt: "created_at",
     updatedAt: "updated_at" }
-});
+  });
 
-const Wine = mongoose.model("Wine", wineSchema);
+  const Wine = mongoose.model("Wine", wineSchema);
 
-module.exports = Wine;
+  module.exports = Wine;
