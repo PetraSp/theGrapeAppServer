@@ -7,22 +7,22 @@ const Notes         = require('../../models/notes');
 router.post('/userNotes', (req, res, next) => {
   console.log('This is notes in the API!')
   const newNotes = new Notes ({
-    appearance: {
-      color: req.body.appearance.color
+     appearance: {
+      colorSchema: req.body.appearance.colorSchema
     },
     nose: {
       floral: req.body.nose.floral,
       redFruit: req.body.nose.redFruit,
       blackFruit: req.body.nose.blackFruit,
-      dryFruit: req.body.nose.dryFruit,
-      herbsSpices: req.body.nose.herbsSpices,
+      driedFruit: req.body.nose.dryFruit,
+      herbs: req.body.nose.herbsSpices,
       quirky: req.body.nose.quirky
     },
     palate: {
       redFruit: req.body.palate.redFruit,
       blackFruit: req.body.palate.blackFruit,
-      dryFruit: req.body.palate.dryFruit,
-      herbsSpices: req.body.palate.herbsSpices,
+      driedFruit: req.body.palate.dryFruit,
+      herbs: req.body.palate.herbsSpices,
       quirky: req.body.palate.quirky
     }
   });

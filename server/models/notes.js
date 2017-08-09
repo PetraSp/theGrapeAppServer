@@ -4,21 +4,21 @@ const Schema   = mongoose.Schema;
 
 const notesSchema = new Schema({
   appearance: {
-    color: {type: String, default: 'default'}},
+    colorSchema: {type: String, default: 'default'}},
   nose: {
-    floral: {type: Array, default: ['none']},
-    redFruit: {type: Array, default: ['none']},
-    blackFruit: {type: Array, default: ['none']},
-    dryFruit: {type: Array, default: ['none']},
-    herbsSpices: {type: Array, default: ['none']},
-    quirky: {type: Array, default: ['none']},
+    floral: {type: String, default: ['none']},
+    redFruit: {type: String, default: ['none']},
+    blackFruit: {type: String, default: ['none']},
+    driedFruit: {type: String, default: ['none']},
+    herbs: {type: String, default: ['none']},
+    quirky: {type: String, default: ['none']},
   },
   palate: {
-    redFruit: {type: Array, default: ['none']},
-    blackFruit: {type: Array, default: ['none']},
-    dryFruit: {type: Array, default: ['none']},
-    herbsSpices: {type: Array, default: ['none']},
-    quirky: {type: Array, default: ['none']},
+    redFruit: {type: String, default: ['none']},
+    blackFruit: {type: String, default: ['none']},
+    driedFruit: {type: String, default: ['none']},
+    herbs: {type: String, default: ['none']},
+    quirky: {type: String, default: ['none']},
   }
 }, {
   timestamps: {
