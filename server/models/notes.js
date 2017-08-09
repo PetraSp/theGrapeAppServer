@@ -4,7 +4,6 @@ const Schema   = mongoose.Schema;
 
 const notesSchema = new Schema({
   appearance: {
-    intensity: {type: String, default: 'default'},
     color: {type: String, default: 'default'}},
   nose: {
     floral: {type: String, default: 'default'},
