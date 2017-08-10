@@ -64,6 +64,7 @@ const wines = [
         quirky: ['meat/leather', 'coffee', 'forest floor'],
       },
       palate: {
+        floral: ['none'],
         redFruit: ['none'],
         blackFruit: ['none'],
         driedFruit: ['none'],
@@ -91,6 +92,7 @@ const wines = [
         quirky: ['meat/leather', 'mushroom'],
       },
       palate: {
+        floral: ['thing'],
         redFruit: ['strawberry'],
         blackFruit: ['none'],
         driedFruit: ['none'],
