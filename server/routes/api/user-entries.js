@@ -26,6 +26,34 @@ router.get('/user-entries/:id', (req, res, next) => {
   });
 });
 
+router.post('/user-entries/update', (req, res, next) => {
+
+});
+
+
+router.put('/user-entries/:id', (req, res) => {
+  if(!mongoose.Types.ObjectId.isValid(req.params.id)) {
+    res.status(400).json({ message: 'Specified id is not valid' });
+    return;
+  }
+
+  const updates = {
+    tasting: req.body.tasting
+  };
+
+  User.findByIdAndUpdate(req.params.id, updates, (err) => {
+    if (err) {
+      res.json(err);
+      return;
+    }
+
+    res.json({
+      message: 'User updated successfully'
+    });
+  });
+})
+
+
 
 router.post('/signup', (req,res,next) => {
   console.log('IM ON THE BACKEND!');
