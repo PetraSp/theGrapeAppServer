@@ -34,6 +34,8 @@ const wineSchema = new Schema({
     updatedAt: "updated_at" }
   });
 
+  wineSchema.index({"$**": "text"});
+
   const Wine = mongoose.model("Wine", wineSchema);
 
   module.exports = Wine;
