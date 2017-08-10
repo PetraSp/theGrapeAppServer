@@ -52,8 +52,7 @@ const wines = [
     label: 'https://lanocheenvino.files.wordpress.com/2016/03/1884.jpg',
     expertNotes:  {
       appearance: {
-        intensity: 'deep',
-        color: 'ruby',
+        colorSchema: ['deep', 'ruby'],
       },
       nose: {
         floral: ['none'],
