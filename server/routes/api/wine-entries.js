@@ -22,17 +22,18 @@ router.get('/wine-entries/:id', (req, res, next) => {
 });
 
 
-router.get('/wine-search', (req, res, next) => {
-  let userSearchQuery = req.params.userSearchQuery;
-  console.log("userSearchQuery", req.params.userSearchQuery);
-  console.log('SEAEAARRRCH ME BEAUTIES!!!! SEARCH!!!!');
+router.post('/wine-search', (req, res, next) => {
+  console.log("req.body", req.body);
+  let userSearchQuery = req.body.wineName;
+  // console.log("userSearchQuery", req.body.userSearchQuery);
+  // console.log('SEAEAARRRCH ME BEAUTIES!!!! SEARCH!!!!');
   // db.jobs.find({$text: {"$search": " \" Madrid \" \" Uber \" "}}).pretty()
   // db.jobs.find({$text: {"$search": "\"Madrid\"\"Uber\""}}).pretty()
   Wine.find({$text: {$search: userSearchQuery}}, (err, result) => {
     console.log('inside mongo find wine')
     if (err) { return res.json(err).status(500) }
     console.log("result", result);
-    return res.json(result); //Save data
+    res.json(result); //Save data
   });
 });
 
