@@ -21,4 +21,19 @@ router.get('/wine-entries/:id', (req, res, next) => {
   });
 });
 
+
+// router.get('/wine-search', (req, res, next) => {
+//   console.log('req.body', req.body);
+//   let userSearchQuery = req.body.userSearchQuery;
+//   console.log("userSearchQuery", req.body.userSearchQuery);
+//   console.log('SEAEAARRRCH ME BEAUTIES!!!! SEARCH!!!!');
+//   // db.jobs.find({$text: {"$search": " \" Madrid \" \" Uber \" "}}).pretty()
+//   // db.jobs.find({$text: {"$search": "\"Madrid\"\"Uber\""}}).pretty()
+//   Job.find({$text: {$search: req.body.userSearchQuery}}, (err, result) => {
+//     console.log("result", result);
+//     req.session.success = result; //Save data
+//     res.redirect('/job_display');
+//   });
+//   });
+
 module.exports = router;

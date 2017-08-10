@@ -2,6 +2,42 @@
 const express       = require('express');
 const router        = express.Router();
 const Entry         = require('../../models/tasting');
+const Notes         = require('../../models/notes');
+
+router.post('/userNotes', (req, res, next) => {
+  console.log('This is notes in the API!')
+  const newNotes = new Notes ({
+     appearance: {
+      colorSchema: req.body.appearance.colorSchema
+    },
+    nose: {
+      floral: req.body.nose.floral,
+      redFruit: req.body.nose.redFruit,
+      blackFruit: req.body.nose.blackFruit,
+      driedFruit: req.body.nose.driedFruit,
+      herbs: req.body.nose.herbs,
+      quirky: req.body.nose.quirky
+    },
+    palate: {
+      redFruit: req.body.palate.redFruit,
+      blackFruit: req.body.palate.blackFruit,
+      driedFruit: req.body.palate.driedFruit,
+      herbs: req.body.palate.herbs,
+      quirky: req.body.palate.quirky
+    }
+  });
+
+  newNotes.save((err) => {
+    if (err) {
+      res.json(err);
+      return;
+    }
+    res.json({
+      message: "New user notes created!",
+      id: newNotes._id
+    });
+  });
+})
 
 
 router.get('/tasting-entries', (req, res, next) => {
