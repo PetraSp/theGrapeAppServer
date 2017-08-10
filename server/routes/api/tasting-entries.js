@@ -14,15 +14,15 @@ router.post('/userNotes', (req, res, next) => {
       floral: req.body.nose.floral,
       redFruit: req.body.nose.redFruit,
       blackFruit: req.body.nose.blackFruit,
-      driedFruit: req.body.nose.dryFruit,
-      herbs: req.body.nose.herbsSpices,
+      driedFruit: req.body.nose.driedFruit,
+      herbs: req.body.nose.herbs,
       quirky: req.body.nose.quirky
     },
     palate: {
       redFruit: req.body.palate.redFruit,
       blackFruit: req.body.palate.blackFruit,
-      driedFruit: req.body.palate.dryFruit,
-      herbs: req.body.palate.herbsSpices,
+      driedFruit: req.body.palate.driedFruit,
+      herbs: req.body.palate.herbs,
       quirky: req.body.palate.quirky
     }
   });
