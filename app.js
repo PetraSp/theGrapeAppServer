@@ -11,6 +11,7 @@ var index = require('./routes/index');
 
 require('dotenv').config();
 // Connection to DB
+console.log("Connecting to", process.env.MONGODB_URI);
 mongoose.connect(process.env.MONGODB_URI);
 
 var cors = require('cors');
