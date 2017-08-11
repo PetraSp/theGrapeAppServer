@@ -110,16 +110,16 @@ const wines = [
       },
       nose: {
         floral: ['none'],
-        redFruit: ['raspberry'],
+        redFruit: ['strawberry', 'raspberry'],
         blackFruit: ['none'],
-        driedFruit: ['none'],
+        driedFruit: ['raisins'],
         herbs: ['cinnamon', 'clove'],
         quirky: ['chocolate'],
       },
       palate: {
         floral: ['none'],
         redFruit: ['red cherry'],
-        blackFruit: ['black currant'],
+        blackFruit: ['black currant', 'blackberry'],
         driedFruit: ['none'],
         herbs: ['black pepper'],
         quirky: ['mushroom']
