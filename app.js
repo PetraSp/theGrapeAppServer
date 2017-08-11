@@ -9,9 +9,9 @@ const mongoose = require('mongoose');
 
 var index = require('./routes/index');
 
-var config = require('./config');
+var config = require('./DotEnv');
 // Connection to DB
-mongoose.connect(`mongodb://localhost:${config.portDB}/${config.databaseName}`);
+mongoose.connect(process.env.MONGODB_URI);
 
 var cors = require('cors');
 var app = express();
