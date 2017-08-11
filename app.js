@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 
 var index = require('./routes/index');
 
-var config = require('./DotEnv');
+require('dotenv').config();
 // Connection to DB
 mongoose.connect(process.env.MONGODB_URI);
 
