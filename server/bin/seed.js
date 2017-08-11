@@ -49,11 +49,10 @@ const wines = [
     name: 'Presidents Blend',
     vineyard: 'Escorihuela Gascon',
     vintage: 2008,
-    label: 'https://lanocheenvino.files.wordpress.com/2016/03/1884.jpg',
+    label: 'https://wine-searcher1.freetls.fastly.net/images/labels/78/04/bodegas-escorihuela-gascon-1884-reserve-cabernet-sauvignon-mendoza-argentina-10297804.jpg',
     expertNotes:  {
       appearance: {
-        intensity: 'deep',
-        color: 'ruby',
+        colorSchema: ['deep - ruby'],
       },
       nose: {
         floral: ['none'],
@@ -77,11 +76,10 @@ const wines = [
     name: 'Garnatxa Negra',
     vineyard: 'Edetaria',
     vintage: 2011,
-    label: 'https://wine-searcher1.freetls.fastly.net/images/labels/08/33/bodegas-edetaria-via-terra-garnatxa-blanca-terra-alta-spain-10680833t.jpg',
+    label: 'http://cdn.ct-static.com/labels/334260.jpg',
     expertNotes:  {
       appearance: {
-        intensity: 'medium',
-        color: 'ruby',
+        colorSchema: ['medium - garnet']
       },
       nose: {
         floral: ['perfumed, floral notes', 'violet'],
@@ -101,6 +99,33 @@ const wines = [
       },
     },
   },
+  {
+    name: 'Silver Oak',
+    vineyard: 'Silver Oak Cellars',
+    vintage: 2006,
+    label: 'http://www.winemag.com/wp-content/assets/reviews/label-images/wine/wine/131290_21B_2793_070111.jpg',
+    expertNotes:  {
+      appearance: {
+        colorSchema: ['deep - garnet'],
+      },
+      nose: {
+        floral: ['none'],
+        redFruit: ['raspberry'],
+        blackFruit: ['none'],
+        driedFruit: ['none'],
+        herbs: ['cinnamon', 'clove'],
+        quirky: ['chocolate'],
+      },
+      palate: {
+        floral: ['none'],
+        redFruit: ['red cherry'],
+        blackFruit: ['black currant'],
+        driedFruit: ['none'],
+        herbs: ['black pepper'],
+        quirky: ['mushroom']
+      },
+    },
+  }
 
 ];
 
