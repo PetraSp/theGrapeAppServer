@@ -9,9 +9,10 @@ const mongoose = require('mongoose');
 
 var index = require('./routes/index');
 
-var config = require('./config');
+require('dotenv').config();
 // Connection to DB
-mongoose.connect(`mongodb://localhost:${config.portDB}/${config.databaseName}`);
+console.log("Connecting to", process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI);
 
 var cors = require('cors');
 var app = express();
