@@ -51,7 +51,7 @@ router.put('/user-entries/:id', (req, res) => {
       message: 'User updated successfully'
     });
   });
-})
+});
 
 
 
