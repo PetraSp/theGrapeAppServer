@@ -9,8 +9,9 @@ const mongoose = require('mongoose');
 
 var index = require('./routes/index');
 
-var config = require('./DotEnv');
+require('dotenv').config();
 // Connection to DB
+console.log("Connecting to", process.env.MONGODB_URI);
 mongoose.connect(process.env.MONGODB_URI);
 
 var cors = require('cors');
