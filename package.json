@@ -10,7 +10,7 @@
     "setup": "node ./setup.js",
     "seed": "node ./bin/seed",
     "start-dev": "nodemon ./bin/www",
-    "start": "node ./bin/www"
+    "start": "node server.js"
   },
   "dependencies": {
     "aws": "0.0.3-2",
